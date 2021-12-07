@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="10.3.5" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.5" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Entities\AlbumWithArtistName.cs" />
+    </ItemGroup>
+
+</Project>
