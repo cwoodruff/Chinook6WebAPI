@@ -1,5 +1,4 @@
-﻿using System;
-using Chinook.Domain.Entities;
+﻿using Chinook.Domain.Entities;
 
 namespace Chinook.Domain.Repositories;
 

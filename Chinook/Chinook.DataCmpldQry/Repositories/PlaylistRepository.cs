@@ -1,6 +1,5 @@
 ﻿using Chinook.Domain.Entities;
 using Chinook.Domain.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace Chinook.DataCmpldQry.Repositories;
 

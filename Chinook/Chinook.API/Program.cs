@@ -20,6 +20,7 @@ builder.Services.AddProblemDetail();
 builder.Services.AddControllers();
 
 var app = builder.Build();
+app.UseHttpLogging();
 app.UseHttpsRedirection();
 app.UseCors();
 //app.UseAuthorization();

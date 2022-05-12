@@ -15,6 +15,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.AspNetCore.HttpLogging;
 
 //using Chinook.Data.Repositories;
 using Chinook.DataCmpldQry.Repositories;
@@ -48,6 +49,17 @@ public static class ServicesConfiguration
             .AddConsole()
             .AddFilter(level => level >= LogLevel.Information)
         );
+        
+        services.AddHttpLogging(logging =>
+        {
+            // Customize HTTP logging.
+            logging.LoggingFields = HttpLoggingFields.All;
+            logging.RequestHeaders.Add("My-Request-Header");
+            logging.ResponseHeaders.Add("My-Response-Header");
+            logging.MediaTypeOptions.AddText("application/javascript");
+            logging.RequestBodyLogLimit = 4096;
+            logging.ResponseBodyLogLimit = 4096;
+        });
     }
 
     public static void ConfigureValidators(this IServiceCollection services)

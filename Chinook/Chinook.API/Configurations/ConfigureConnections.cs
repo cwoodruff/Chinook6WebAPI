@@ -1,5 +1,4 @@
 using System.Runtime.InteropServices;
-using Chinook.Domain.DbInfo;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,7 +22,6 @@ public static class ConfigureConnections
 
         services.AddDbContextPool<ChinookContext>(options => options.UseSqlServer(connection));
         services.AddSingleton(new SqlConnection(connection));
-        services.AddSingleton(new DbInfo(connection));
 
         return services;
     }

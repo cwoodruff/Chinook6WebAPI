@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Chinook.DataCmpldQry;
-using Chinook.Domain.ApiModels;
 using Chinook.Domain.Entities;
 using Chinook.Domain.Repositories;
 using Chinook.Domain.Supervisor;

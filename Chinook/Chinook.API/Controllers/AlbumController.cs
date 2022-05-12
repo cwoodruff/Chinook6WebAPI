@@ -4,7 +4,6 @@ using Chinook.Domain.Exceptions;
 using Chinook.Domain.ProblemDetails;
 using Chinook.Domain.Supervisor;
 using FluentValidation;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
