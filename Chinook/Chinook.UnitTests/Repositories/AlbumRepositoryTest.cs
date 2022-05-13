@@ -53,8 +53,8 @@ namespace Chinook.UnitTests.Repositories
         public void AlbumGetOne()
         {
             // Arrange
-            var albumId = 5;
-            var artistId = 10;
+            var albumId = 1;
+            var artistId = 1;
 
             // We are currently required to care about an Artist ID because the convert part of album specifically references the artist repository as well.
             _context.Artists.Add(new Artist() { Id = artistId, Name = "Artist"});
