@@ -13,7 +13,7 @@ public class InvoiceRepository : BaseRepository<Invoice>, IDisposable, IInvoiceR
     public void Dispose() => _context.Dispose();
 
     public async Task<List<Invoice>> GetByEmployeeId(int id) =>
-        await _context.Customers.Where(a => a.SupportRepId == 5).SelectMany(t => t.Invoices)
+        await _context.Customers.Where(a => a.SupportRepId == id).SelectMany(t => t.Invoices)
             .AsNoTrackingWithIdentityResolution().ToListAsync();
 
     public async Task<List<Invoice>> GetByCustomerId(int id) =>

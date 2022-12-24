@@ -26,7 +26,7 @@ public class TrackRepository : BaseRepository<Track>, IDisposable, ITrackReposit
             .AsNoTrackingWithIdentityResolution().ToListAsync();
 
     public async Task<List<Track>> GetByArtistId(int id) =>
-        await _context.Albums.Where(a => a.ArtistId == 5).SelectMany(t => t.Tracks)
+        await _context.Albums.Where(a => a.ArtistId == id).SelectMany(t => t.Tracks)
             .AsNoTrackingWithIdentityResolution().ToListAsync();
 
     public async Task<List<Track>> GetByInvoiceId(int id) => await _context.Tracks
